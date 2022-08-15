@@ -1,0 +1,38 @@
+import java.util.*;
+public class Main
+{   public static class Node{
+    int data;
+    Node next;
+} 
+public static class Linkedlist{
+    Node head;
+    Node tail;
+    int size;
+
+ void addLast(int val){
+    Node temp=new Node();
+    temp.data=val;
+    temp.next=null;
+    if(size==0){
+        head=tail=temp;
+    }
+    else{
+        tail.next=temp;
+        tail=temp;
+    }
+    size++;
+    System.out.print(temp.data+"->");
+    }
+    
+}
+
+
+
+	public static void main(String[] args) {
+	    Linkedlist l=new Linkedlist();
+	    l.addLast(10);
+	    l.addLast(20);
+	    
+
+	}
+}
